@@ -1,18 +1,13 @@
 <template>
-    <section class="user-search" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
+    <section class="product-search" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
         <div class="search-icon">
           <i class="icon tiezi"></i>
-      用户轨迹跟踪
+      产品画像
         </div>
         <div class="search-block">
-            <el-form :model="userValidateForm" :inline="true" ref="userValidateForm">
-               <!--  <el-form-item prop="userName" :rules="[
-      { required: true, message: '用户不能为空'}
-    ]">
-                    <el-input icon="search" :on-icon-click="serchClick" v-model.trim="userValidateForm.userName" placeholder="查询用户" auto-complete="off"></el-input>
-                </el-form-item> -->
-                <el-form-item label="用户查询">
-                    <el-autocomplete popper-class="my-autocomplete" v-model="userValidateForm.userName" :fetch-suggestions="querySearch" custom-item="my-item-zh" placeholder="Phone/LenovoID/Mail/IMEI/SN/ServiceUserID" @select="handleSelect" icon="search" :on-icon-click="serchClick"></el-autocomplete>
+            <el-form :model="productValidateForm" :inline="true" ref="productValidateForm">
+                <el-form-item label="产品查询">
+                    <el-autocomplete popper-class="my-autocomplete" v-model="productValidateForm.productName" :fetch-suggestions="querySearch" custom-item="my-item-zh" placeholder="Product Name" @select="handleSelect" icon="search" :on-icon-click="searchClick"></el-autocomplete>
                 </el-form-item>
             </el-form>
         </div>
@@ -26,7 +21,7 @@
     import localforage from 'localforage'
     import Vue from 'vue'
     import { mapGetters } from 'vuex'
-    import users from '@/vuex/modules/mockedUsers'
+    import products from '@/vuex/modules/mockedProducts'
 
     Vue.component('my-item-zh', {
       functional: true,
@@ -41,19 +36,19 @@
       }
   });
     export default {
-        name: 'userSearch',
+        name: 'productSearch',
         data() {
             return {
-               userValidateForm: {
-                  userName: localStorage.getItem('customer-profile-username')?localStorage.getItem('customer-profile-username'):''
-               },
-                restaurants: []
-              }
+              productValidateForm: {
+                productName: localStorage.getItem('customer-profile-productname') || ''
+              },
+              restaurants: []
+            }
         },
         computed: {
             ...mapGetters({
                 home_datas: 'home_datas',
-                user_datas: 'user_datas',
+                product_datas: 'product_datas',
                 fullscreenLoading:'fullscreenLoading'
             })
         },
@@ -64,24 +59,20 @@
            this.restaurants = this.loadAll();
         },
         methods: {
-          serchClick(){
-              const userName = this.userValidateForm.userName.trim();
-                if ( userName.length > 0 ) {
-                      //this.fullscreenLoading = true;
-                      //setTimeout(() => {
-                        //this.fullscreenLoading = false;
-                        this.$store.dispatch('getUserInfo', userName);
-                      //}, 3000);
+          searchClick(){
+              const productName = this.productValidateForm.productName.trim();
+                if ( productName.length > 0 ) {
+                  this.$store.dispatch('getProductInfo', productName);
                 }
                  else {
                           this.$message({
                           showClose: true,
-                          message: '用户名不能为空',
+                          message: '产品名不能为空',
                           type: 'error'
                         });
                         }
               },
-          
+
              querySearch(queryString, cb) {
               var restaurants = this.restaurants;
               var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants;
@@ -94,10 +85,10 @@
             };
           },
           loadAll() {
-            return users.map(user => ({value: user.userBaseInfo.phone}));
+            return products.map(product => ({value: product.basic.name}));
           },
           handleSelect(item) {
-             this.serchClick();             
+             this.searchClick();
           },
           handleIconClick(ev) {
             console.log(ev);
@@ -107,7 +98,7 @@
 </script>
 
 <style lang="less" scoped>
-.user-search {
+.product-search {
   position: relative;
   .search-icon{
     position: absolute;
@@ -133,7 +124,7 @@
   }
 
   .el-form-item {
-    margin-bottom: 0;    
+    margin-bottom: 0;
     label.el-form-item__label {
       font-weight: bold !important;
       font-size: 16px !important;
@@ -164,5 +155,5 @@
               }
             }
           }
-     
+
 </style>

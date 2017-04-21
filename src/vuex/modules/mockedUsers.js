@@ -1,5 +1,3 @@
-import Mock from 'mockjs'
-
 const user1 = {
     // 用户基本信息
     'userBaseInfo': {
@@ -233,7 +231,7 @@ const user1 = {
             {value:335, name:'工作学习'},
             {value:233, name:'新闻阅读'},
             {value:678, name:'游戏'},
-            {value:109, name:'生活购物'},  
+            {value:109, name:'生活购物'},
             {value:654, name:'其它'}
         ]
     },
@@ -268,7 +266,7 @@ const user1 = {
             {value:335, name:'主题壁纸'},
             {value:233, name:'办公软件'},
             {value:678, name:'浏览器'},
-            {value:109, name:'聊天通讯'},  
+            {value:109, name:'聊天通讯'},
             {value:654, name:'其它'}
         ]
     },
@@ -517,7 +515,7 @@ const user2 = {
             {value:335, name:'工作学习'},
             {value:233, name:'新闻阅读'},
             {value:678, name:'游戏'},
-            {value:809, name:'生活购物'},  
+            {value:809, name:'生活购物'},
             {value:654, name:'其它'}
         ]
     },
@@ -552,7 +550,7 @@ const user2 = {
             {value:35, name:'主题壁纸'},
             {value:233, name:'办公软件'},
             {value:28, name:'浏览器'},
-            {value:109, name:'聊天通讯'},  
+            {value:109, name:'聊天通讯'},
             {value:654, name:'其它'}
         ]
     },
@@ -801,7 +799,7 @@ const user3 = {
             {value:335, name:'工作学习'},
             {value:233, name:'新闻阅读'},
             {value:978, name:'游戏'},
-            {value:809, name:'生活购物'},  
+            {value:809, name:'生活购物'},
             {value:654, name:'其它'}
         ]
     },
@@ -836,7 +834,7 @@ const user3 = {
             {value:335, name:'主题壁纸'},
             {value:233, name:'办公软件'},
             {value:678, name:'浏览器'},
-            {value:109, name:'聊天通讯'},  
+            {value:109, name:'聊天通讯'},
             {value:654, name:'其它'}
         ]
     },
@@ -1085,7 +1083,7 @@ const user4 = {
             {value:335, name:'工作学习'},
             {value:233, name:'新闻阅读'},
             {value:978, name:'游戏'},
-            {value:809, name:'生活购物'},  
+            {value:809, name:'生活购物'},
             {value:654, name:'其它'}
         ]
     },
@@ -1120,7 +1118,7 @@ const user4 = {
             {value:335, name:'主题壁纸'},
             {value:233, name:'办公软件'},
             {value:678, name:'浏览器'},
-            {value:809, name:'聊天通讯'},  
+            {value:809, name:'聊天通讯'},
             {value:654, name:'其它'}
         ]
     },
@@ -1369,7 +1367,7 @@ const user5 = {
             {value:335, name:'工作学习'},
             {value:233, name:'新闻阅读'},
             {value:978, name:'游戏'},
-            {value:809, name:'生活购物'},  
+            {value:809, name:'生活购物'},
             {value:654, name:'其它'}
         ]
     },
@@ -1404,7 +1402,7 @@ const user5 = {
             {value:335, name:'主题壁纸'},
             {value:233, name:'办公软件'},
             {value:678, name:'浏览器'},
-            {value:109, name:'聊天通讯'},  
+            {value:109, name:'聊天通讯'},
             {value:64, name:'其它'}
         ]
     },

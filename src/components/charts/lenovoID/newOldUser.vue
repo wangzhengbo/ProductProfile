@@ -1,9 +1,9 @@
 <template>
 <div>
     <div style="font-size: 18px; font-weight: bold; text-align: center;">
-        手机应用
+        新老用户
     </div>
-    <div id="download-behavior-chart-container" class="chart-container" style="margin-top: -62px;"></div>
+    <div id="new-old-user-chart-container" class="chart-container" style="margin-top: -62px;"></div>
 </div>
 </template>
 <script type="text/babel">
@@ -20,7 +20,7 @@
             })
         },
         mounted() {
-            var myChart = echarts.init(document.getElementById('download-behavior-chart-container'));
+            var myChart = echarts.init(document.getElementById('new-old-user-chart-container'));
            let option = {
                 title: {
                     text: '',
@@ -35,12 +35,12 @@
                     orient : 'vertical',
                     x : 'right',
                     y : 'center',
-                    data: this.product_datas.mobileApps.legend
+                    data: this.product_datas.lenovoID.newOldUser.legend
                 },
                 calculable : true,
                 series : [
                     {
-                        name:'手机应用',
+                        name:'新老用户',
                         type:'pie',
             			radius : '55%',
             			center: ['50%', '60%'],
@@ -54,7 +54,7 @@
                                 color:colorsFunc
 			              }
 			          },
-                        data: this.product_datas.mobileApps.data
+                        data: this.product_datas.lenovoID.newOldUser.data
                     }
                 ]
             };

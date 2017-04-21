@@ -1,13 +1,6 @@
 <template>
     <div class="user-map-container">
-    <div id="user-map-chart-container" class="chart-container"></div>
-    <div class="top-city">
-        <ul>
-            <li v-for="(topProvince, index) in user_datas.userMap.top">
-                <span>TOP{{index + 1}}: {{topProvince}}</span>
-            </li>
-        </ul>
-    </div>
+      <div id="user-map-chart-container" class="chart-container"></div>
     </div>
 </template>
 
@@ -29,7 +22,7 @@
         computed: {
             ...mapGetters({
                 home_datas: 'home_datas',
-                user_datas: 'user_datas'
+                product_datas: 'product_datas'
             })
         },
         created () {
@@ -37,11 +30,8 @@
         },
         mounted() {
             var myChart = echarts.init(document.getElementById('user-map-chart-container'));
-            function randomData() {
-                return Math.round(800,Math.random()*1000);
-            }
             echarts.registerMap('china', require('./china.json'))
-    
+
             let option = {
                 title: {
                     text: '',
@@ -57,7 +47,7 @@
                     show: true,
                     orient: 'vertical',
                     left: 'top',
-                    data: this.user_datas.userMap.top
+                    data: this.product_datas.area.legend
                 },
                 visualMap: {
                     show:false,
@@ -87,10 +77,10 @@
                                 //textStyle:{color:"#c71585"}//省份标签字体颜色,
                                 color: colorsFunc
                             },
-                        
+
                             emphasis: {//对应的鼠标悬浮效果
                               show: true
-                                                        
+
                               }
                         },
                         itemStyle: {
@@ -105,7 +95,7 @@
                                 //areaColor:"#ffdead",
                             }
                         },
-                        data: this.user_datas.userMap.data
+                        data: this.product_datas.area.data
                     }
                 ]
             };
@@ -132,7 +122,7 @@
                     margin-bottom: 5px;
                     span{
                         display: inline-block;
-                        margin-right: 5px;                   
+                        margin-right: 5px;
                          font-size: 12px;
                          line-height: 15px;
                     }
