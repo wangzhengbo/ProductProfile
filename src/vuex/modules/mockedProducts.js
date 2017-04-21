@@ -152,8 +152,8 @@ const product1 = {
     newOldUser: {
       legend: ['新注册LenovoID', '已有LenovoID'],
       data: [
-        {value: 60, name: '新注册LenovoID'},
-        {value: 30, name: '已有LenovoID'}
+        {value: 20, name: '新注册LenovoID'},
+        {value: 69, name: '已有LenovoID'}
       ]
     }
   },
@@ -335,8 +335,8 @@ const product2 = {
     newOldUser: {
       legend: ['新注册LenovoID', '已有LenovoID'],
       data: [
-        {value: 60, name: '新注册LenovoID'},
-        {value: 30, name: '已有LenovoID'}
+        {value: 20, name: '新注册LenovoID'},
+        {value: 69, name: '已有LenovoID'}
       ]
     }
   },
