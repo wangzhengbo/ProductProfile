@@ -1,4 +1,4 @@
-const product1 = {
+﻿const product1 = {
   basic: {
     name: "Thinkpad X1 Carbon",
     business: {
@@ -42,29 +42,29 @@ const product1 = {
         {
           name: "Consumption Level",
           type: "消费等级",
-          desc: "高端消费者占比超5成\n中断消费者占比35.8%"
+          desc: "高端消费者占比超5成\n中端消费者占比35.8%"
         },
         {
           name: "Geographic",
           type: "地域分布",
-          desc: "国外用户占比仅为1.8%\n北上广等一线城市y用户对Carbon的关注度较高\n长三角地区对该产品关注度也相对较高"
+          desc: "国外用户占比仅为1.8%\n北上广等一线城市用户对Carbon的关注度较高\n长三角地区对该产品关注度也相对较高"
         }
       ]
     }
   },
   // 地域
   area: {
-    legend: ['北京', '上海', '山东', '海外', '广州'],
+    legend: ['北京', '广东', '江苏', '上海', '浙江'],
     data: [
-        {value: 100, name: '北京'},
-        {value: 80, name: '上海'},
-        {value: 67, name: '山东'},
-        {value: 30, name: '海外'},
-        {value: 20, name: '广州'}
+        {value: 13.6, name: '北京'},
+        {value: 12.2, name: '广东'},
+        {value: 9.2, name: '江苏'},
+        {value: 8.6, name: '上海'},
+        {value: 6.7, name: '浙江'}
       ]
   },
   // 上网特征
-  internetFeature: {
+ internetFeature: {
     //上网时段
     times: {
       legend: ['1-6', '7-8', '9-11', '12-13', '14-16', '17-18', '19-21', '22-24'],
@@ -105,11 +105,11 @@ const product1 = {
     age: {
       legend: ['小于18岁', '18-24岁', '25-34岁', '35-49岁', '49岁以上'],
       data: [
-        {value: 40, name: '小于18岁'},
-        {value: 50, name: '18-24岁'},
-        {value: 10, name: '25-34岁'},
-        {value: 12, name: '35-49岁'},
-        {value: 18, name: '49岁以上'}
+        {value: 8, name: '小于18岁'},
+        {value: 12, name: '18-24岁'},
+        {value: 46, name: '25-34岁'},
+        {value: 20, name: '35-49岁'},
+        {value: 13, name: '49岁以上'}
       ]
     }
   },
@@ -119,53 +119,53 @@ const product1 = {
     sex: {
       legend: ['男', '女'],
       data: [
-        {value: 80, name: '男'},
-        {value: 50, name: '女'}
+        {value: 59, name: '男'},
+        {value: 41, name: '女'}
       ]
     },
     // 是否已婚
     married: {
       legend: ['已婚', '已婚'],
       data: [
-        {value: 100, name: '已婚'},
-        {value: 30, name: '未婚'}
+        {value: 75, name: '已婚'},
+        {value: 25, name: '未婚'}
       ]
     },
     // 是否有孩子
     baby: {
       legend: ['有孩子', '无孩子'],
       data: [
-        {value: 20, name: '有孩子'},
-        {value: 80, name: '无孩子'}
+        {value: 43, name: '有孩子'},
+        {value: 57, name: '无孩子'}
       ]
     }
   },
   // LenovoID - LenovoID有无
   lenovoID: {
     whetherOrNot: {
-      legend: ['新注册LenovoID', '已有LenovoID'],
+      legend: ['无LenovoID', '已有LenovoID'],
       data: [
-        {value: 60, name: '新注册LenovoID'},
+        {value: 60, name: '无LenovoID'},
         {value: 30, name: '已有LenovoID'}
       ]
     },
     newOldUser: {
-      legend: ['新注册LenovoID', '已有LenovoID'],
+      legend: ['一周内新注册LenovoID', '已有LenovoID'],
       data: [
-        {value: 20, name: '新注册LenovoID'},
-        {value: 69, name: '已有LenovoID'}
+        {value: 2, name: '新注册LenovoID'},
+        {value: 98, name: '已有LenovoID'}
       ]
     }
   },
   // 行为偏好 - 手机应用
   mobileApps: {
-    legend: ['主题壁纸', '办公软件', '浏览器', '聊天通讯', '其它'],
+    legend: ['工作学习', '拍摄美图', '新闻阅读', '社交聊天', '其它'],
     data: [
-      {value: 335, name: '主题壁纸'},
-      {value: 233, name: '办公软件'},
-      {value: 678, name: '浏览器'},
-      {value: 109, name: '聊天通讯'},
-      {value: 64, name: '其它'}
+      {value: 45, name: '工作学习'},
+      {value: 7, name: '拍摄美图'},
+      {value: 12, name: '新闻阅读'},
+      {value: 7, name: '社交聊天'},
+      {value: 1, name: '其它'}
     ]
   },
   // 行为偏好 - PC应用
@@ -173,8 +173,8 @@ const product1 = {
     legend: ['主题壁纸', '办公软件', '浏览器', '聊天通讯', '其它'],
     data: [
       {value: 335, name: '主题壁纸'},
-      {value: 233, name: '办公软件'},
-      {value: 678, name: '浏览器'},
+      {value: 433, name: '办公软件'},
+      {value: 178, name: '浏览器'},
       {value: 109, name: '聊天通讯'},
       {value: 64, name: '其它'}
     ]
@@ -190,7 +190,7 @@ const product2 = {
         {
           name: "E-Ccomerce",
           type: "电商偏好",
-          desc: "对该产品关注度较高的人群喜欢购买数码产品，爱保健爱运动；也经常购买美食、家电、服装"
+          desc: "用户更偏爱电脑办公、美食特产和出差旅行"
         }
       ]
     },
@@ -200,12 +200,12 @@ const product2 = {
         {
           name: "Media",
           type: "媒体偏好",
-          desc: "该人群喜欢浏览IT数码资讯，经常看电影，喜欢美食；也经常浏览军事和读书板块"
+          desc: "该用户多数对IT数码、财经、教育培训类兴趣度较高"
         },
         {
           name: "Brand",
           type: "品牌偏好",
-          desc: "该人群偏好电子类品牌较多，为Thinkpad联想的忠诚粉"
+          desc: "用户对电脑及周边产品、评测等兴趣度较高"
         }
       ]
     },
@@ -215,35 +215,35 @@ const product2 = {
         {
           name: "Gender",
           type: "性别",
-          desc: "男性用户占比近六成"
+          desc: "男性用户占比近7成"
         },
         {
           name: "Age",
           type: "年龄",
-          desc: "以25-49岁人群为主要群体；其中25-34岁占比46%"
+          desc: "将近8成的用户集中在25~49岁；25~34岁用户最多，占比达48.3%"
         },
         {
           name: "Consumption Level",
           type: "消费等级",
-          desc: "高端消费者占比超5成\n中断消费者占比35.8%"
+          desc: "8成为中高端消费者\nLEVEL6、LEVEL7用户占比为46%"
         },
         {
           name: "Geographic",
           type: "地域分布",
-          desc: "国外用户占比仅为1.8%\n北上广等一线城市y用户对Carbon的关注度较高\n长三角地区对该产品关注度也相对较高"
+          desc: "一半以上的用户来自北上广等一线城市\n北京、广东、河南用户数量较多"
         }
       ]
     }
   },
   // 地域
   area: {
-    legend: ['北京', '上海', '山东', '海外', '广州'],
+    legend: ['北京', '广东', '河南', '上海', '浙江'],
     data: [
-        {value: 100, name: '北京'},
-        {value: 80, name: '上海'},
-        {value: 67, name: '山东'},
-        {value: 30, name: '海外'},
-        {value: 20, name: '广州'}
+        {value: 28, name: '北京'},
+        {value: 12, name: '广东'},
+        {value: 8, name: '河南'},
+        {value: 7, name: '上海'},
+        {value: 7, name: '浙江'}
       ]
   },
   // 上网特征
@@ -288,11 +288,11 @@ const product2 = {
     age: {
       legend: ['小于18岁', '18-24岁', '25-34岁', '35-49岁', '49岁以上'],
       data: [
-        {value: 40, name: '小于18岁'},
-        {value: 50, name: '18-24岁'},
-        {value: 10, name: '25-34岁'},
-        {value: 12, name: '35-49岁'},
-        {value: 18, name: '49岁以上'}
+        {value: 3, name: '小于18岁'},
+        {value: 18, name: '18-24岁'},
+        {value: 48, name: '25-34岁'},
+        {value: 30, name: '35-49岁'},
+        {value: 1, name: '49岁以上'}
       ]
     }
   },
@@ -310,47 +310,47 @@ const product2 = {
     married: {
       legend: ['已婚', '已婚'],
       data: [
-        {value: 100, name: '已婚'},
-        {value: 30, name: '未婚'}
+        {value: 19, name: '已婚'},
+        {value: 81, name: '未婚'}
       ]
     },
     // 是否有孩子
     baby: {
       legend: ['有孩子', '无孩子'],
       data: [
-        {value: 20, name: '有孩子'},
-        {value: 80, name: '无孩子'}
+        {value: 77, name: '有孩子'},
+        {value: 23, name: '无孩子'}
       ]
     }
   },
   // LenovoID - LenovoID有无
   lenovoID: {
     whetherOrNot: {
-      legend: ['新注册LenovoID', '已有LenovoID'],
+      legend: ['无LenovoID', '已有LenovoID'],
       data: [
-        {value: 60, name: '新注册LenovoID'},
+        {value: 95, name: '无LenovoID'},
         {value: 30, name: '已有LenovoID'}
       ]
     },
     newOldUser: {
       legend: ['新注册LenovoID', '已有LenovoID'],
       data: [
-        {value: 20, name: '新注册LenovoID'},
+        {value: 1, name: '新注册LenovoID'},
         {value: 69, name: '已有LenovoID'}
       ]
     }
   },
   // 行为偏好 - 手机应用
-  mobileApps: {
-    legend: ['主题壁纸', '办公软件', '浏览器', '聊天通讯', '其它'],
+ mobileApps: {
+    legend: ['工作学习', '拍摄美图', '新闻阅读', '社交聊天', '其它'],
     data: [
-      {value: 335, name: '主题壁纸'},
-      {value: 233, name: '办公软件'},
-      {value: 678, name: '浏览器'},
-      {value: 109, name: '聊天通讯'},
-      {value: 64, name: '其它'}
+      {value: 45, name: '工作学习'},
+      {value: 7, name: '拍摄美图'},
+      {value: 12, name: '新闻阅读'},
+      {value: 7, name: '社交聊天'},
+      {value: 1, name: '其它'}
     ]
-  },
+  } ,
   // 行为偏好 - PC应用
   pcApps: {
     legend: ['主题壁纸', '办公软件', '浏览器', '聊天通讯', '其它'],
